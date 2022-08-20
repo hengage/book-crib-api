@@ -33,6 +33,8 @@ INSTALLED_APPS = [
 
     # Local apps
     'authors.apps.AuthorsConfig',
+    'books.apps.BooksConfig',
+    
 
     # Third part apps
     'rest_framework',
