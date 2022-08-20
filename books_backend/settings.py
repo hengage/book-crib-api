@@ -32,7 +32,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Local apps
-    'authors.apps.AuthorsConfig'
+    'authors.apps.AuthorsConfig',
+
+    # Third part apps
+    'rest_framework',
+    'rest_framework.authtoken'
 ]
 
 MIDDLEWARE = [
