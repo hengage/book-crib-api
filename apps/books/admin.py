@@ -1,3 +1,11 @@
+import imp
 from django.contrib import admin
 
-# Register your models here.
+from .models import BookModel
+
+
+@admin.register(BookModel)
+class BookAdmin(admin.ModelAdmin):
+    model = BookModel
+    list_display = ['title', 'isbn', 'author']
+    ordering = ["title"]

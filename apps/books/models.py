@@ -1,4 +1,3 @@
-from tabnanny import verbose
 from django.db import models
 from django.conf import settings
 
@@ -13,5 +12,5 @@ class BookModel(models.Model):
         return self.title
 
     class Meta:
-        verbose_name = ['Book']
-        verbose_name_plural = ['Books']
+        verbose_name = 'Book'
+        verbose_name_plural = 'Books'
