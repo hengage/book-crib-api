@@ -3,6 +3,11 @@ from django.contrib.auth.admin import UserAdmin
 
 from django.contrib.auth import get_user_model
 Author = get_user_model()
+from books.models import BookModel
+
+class BookInline(admin.TabularInline):
+    model = BookModel
+    extra = 0
 
 @admin.register(Author)
 class CustomUserAdmin(UserAdmin):
@@ -10,6 +15,9 @@ class CustomUserAdmin(UserAdmin):
     list_display = ['email', 'first_name', 'last_name']
 
     ordering = ["first_name"]
+    inlines = [
+        BookInline
+    ]
 
     fieldsets= [
         ("Basic User Details", {
